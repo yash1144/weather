@@ -1,0 +1,136 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.forecast-container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.forecast-container:hover {
+    transform: scale(1.05);
+}
+
+.app-header {
+    font-size: 1.8rem;
+    color: #00796b;
+    margin-bottom: 25px;
+}
+
+.input-section {
+    margin-bottom: 25px;
+}
+
+.dropdown-menu {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 15px;
+    border: 1px solid #b0bec5;
+    background-color: #e0f2f1;
+    color: #00796b;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+
+.dropdown-menu:focus {
+    border-color: #004d40;
+}
+
+.get-weather-btn {
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(2, 136, 209, 0.3);
+}
+
+.get-weather-btn:hover {
+    background-color: #0277bd;
+    box-shadow: 0 6px 12px rgba(2, 136, 209, 0.5);
+}
+
+.weather-info {
+    display: none;
+    margin-top: 30px;
+}
+
+.city-header {
+    font-size: 1.6rem;
+    color: #004d40;
+    margin-bottom: 10px;
+}
+
+.temp-data {
+    font-size: 1.4rem;
+    color: #d32f2f;
+    margin-bottom: 8px;
+}
+
+.weather-description {
+    font-size: 1.1rem;
+    color: #607d8b;
+}
+
+.humidity-info {
+    font-size: 1rem;
+    color: #455a64;
+}
+
+.weather-info {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.7s ease forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .forecast-container {
+        padding: 15px;
+    }
+
+    .app-header {
+        font-size: 1.4rem;
+    }
+
+    .get-weather-btn {
+        font-size: 0.9rem;
+    }
+
+    .city-header {
+        font-size: 1.3rem;
+    }
+
+    .temp-data {
+        font-size: 1.2rem;
+    }
+}
